@@ -14,7 +14,7 @@ sum(); // введите два параметра
 */
 
 function sum (a, b) {
-    if (sum.length !== 2 ) {
+    if (sum.arguments.length !== 2 ) {
         console.log( 'введите два параметра');
     } else if (typeof a !== 'number' || typeof b !== 'number'){ 
         console.log( 'введенные данные не являются числами ');
@@ -40,7 +40,7 @@ square()
 */
 
   function square(a) {
-    if (!a) {
+    if (square.arguments.length == 0) {
         console.log(console.error('Uncaught Error: Функция "square" не может быть вызвана без аргумента'));
     } else {
         console.log(a ** 2)        
@@ -64,7 +64,7 @@ square()
 // Math.floor(Math.random() * (max - min)) + min;
 
 let guessTNumber = (number) => {
-    let randNum = Math.floor(Math.random() * (11 - 1)) + 1;    
+    let randNum = Math.floor(Math.random() * (11 - 1)) ;    
     if (number < 1 || number  > 10) {
         return 'введено неверное значение'
     } else {
